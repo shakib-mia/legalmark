@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LegalMark - Secure Your Legacy with Expert Notary Services</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="w-screen overflow-x-hidden h-full">
+      <div
+        class="bg-primary text-white-heading py-3 hidden lg:block"
+        id="social"
+      >
+        <div class="container">
+          <div class="flex justify-between items-center">
+            <div class="flex gap-6 items-center">
+              <div class="flex gap-2 items-center">
+                <i class="fa fa-phone-alt"></i>
+                <p>+1 234 567 890</p>
+              </div>
+
+              <div class="flex gap-2 items-center">
+                <i class="far fa-envelope"></i>
+                <a href="mailto:support@raddito.com">support@raddito.com</a>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <a class="hover:text-secondary transition" href="#"
+                ><i class="fab text-2xl fa-dribbble"></i
+              ></a>
+              <a class="hover:text-secondary transition" href="#"
+                ><i class="fab text-2xl fa-facebook"></i
+              ></a>
+              <a class="hover:text-secondary transition" href="#"
+                ><i class="fab text-2xl fa-instagram"></i
+              ></a>
+              <a class="hover:text-secondary transition" href="#"
+                ><i class="fab text-2xl fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-screen bg-white transition z-[99999999999999999]"
+        id="navbar"
+      >
+        <nav class="relative w-screen bg-white">
+          <div class="container flex items-center justify-between py-3 xl:py-5">
+            <!-- Logo -->
+            <a href="#" class="inline-block w-7/12 lg:w-1/6">
+              <img src="./assets/logo.jpg" alt="logo" />
+            </a>
+
+            <!-- Hamburger Icon (Visible on Mobile) -->
+            <div class="flex items-center xl:hidden">
+              <span
+                id="menu-toggle"
+                class="text-4xl text-primary focus:outline-none"
+              >
+                <i class="fas fa-bars"></i>
+              </span>
+            </div>
+
+            <!-- Navbar Links -->
+            <ul
+              id="menu"
+              class="absolute left-0 top-[99%] max-h-0 w-screen divide-y divide-secondary overflow-hidden bg-white text-lg font-medium text-primary shadow-lg transition-all duration-500 ease-linear xl:static xl:mt-0 xl:flex xl:max-h-full xl:w-auto xl:gap-8 xl:divide-y-0 xl:bg-transparent xl:py-0 xl:shadow-none z-20"
+            >
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >Home</a
+                >
+              </li>
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#about"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >About</a
+                >
+              </li>
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#services"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >Services</a
+                >
+              </li>
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#why-us"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >Why Us</a
+                >
+              </li>
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#testimonials"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >Testimonials</a
+                >
+              </li>
+              <!-- Navbar Item -->
+              <li class="">
+                <a
+                  href="#faq"
+                  class="container block py-4 transition hover:bg-secondary hover:text-white-body lg:px-0 xl:p-4 xl:px-0 xl:hover:bg-transparent xl:hover:text-secondary"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+
+            <!-- Register Button -->
+            <button class="primary hidden xl:inline-block">Register Now</button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hidden checkbox to control the video pop-up visibility -->
+      <input type="checkbox" name="" id="video-check" class="hidden" />
+
+      <!-- Video pop-up container that takes up the whole screen when opened -->
+      <div
+        id="video"
+        class="fixed top-0 left-0 w-screen h-screen bg-black-heading z-[999999999999999999999999999999999999999] bg-opacity-50 flex items-center justify-center"
+      >
+        <!-- Inner container for the video, with responsive width -->
+        <div class="relative w-11/12 lg:w-1/2 aspect-video">
+          <!-- Close button: clicking it hides the video pop-up by checking the checkbox -->
+          <label for="video-check">
+            <i
+              class="far fa-times-circle text-4xl text-white absolute -right-4 -top-4"
+            ></i>
+          </label>
+
+          <!-- Video iframe, which will display a YouTube video or any other embedded video -->
+          <iframe
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="w-full h-full"
+            id="iframe"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <header
+        style="background-image: url(./assets/hero-bg.jpg)"
+        class="pt-28 py-14 lg:pt-48 lg:pb-24 text-white"
+      >
+        <div class="container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <!-- Left column: Contains text content and a button -->
+            <aside>
+              <!-- Main heading for the hero section -->
+              <h1
+                class="font-aileron font-bold"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Secure Your Legacy with Expert Notary Services
+              </h1>
+
+              <!-- Description paragraph providing more details -->
+              <p
+                class="my-4 lg:mt-6 lg:mb-12 text-white-body font-medium"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                At Legalmark, we understand the importance of your documents.
+                Our trusted notary services ensure that your most crucial papers
+                are properly authenticated and legally binding, giving you peace
+                of mind for all of life's important transactions.
+              </p>
+
+              <!-- Button for scheduling consultations -->
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
+                <button>Get Consultations</button>
+              </div>
+            </aside>
+
+            <!-- Right column: Contains hero image and video play button -->
+            <aside class="relative" id="hero-right">
+              <!-- Background SVG image behind the main image -->
+              <img
+                src="./assets/hero-right-bg.svg"
+                class="ml-auto lg:w-fit w-11/12"
+                alt=""
+                data-aos="fade-left"
+                data-aos-anchor="#hero-right"
+                data-aos-duration="1000"
+              />
+
+              <!-- Wrapper for the video play button and main hero image -->
+              <div
+                class="absolute right-8 left-1 lg:right-16 top-0 bottom-0 flex items-center"
+              >
+                <div
+                  class="relative w-11/12 rounded-xl my-auto h-5/6 lg:h-auto lg:object-contain"
+                >
+                  <!-- Play button overlaying the hero image -->
+                  <label for="video-check">
+                    <i
+                      class="far fa-play-circle absolute left-0 bottom-0 top-0 right-0 m-auto h-fit w-fit z-50 text-6xl rounded-full cursor-pointer"
+                      data-aos="zoom-in"
+                      data-aos-anchor="#hero-right"
+                      data-aos-duration="1000"
+                      data-aos-delay="600"
+                    ></i>
+                  </label>
+
+                  <!-- Main hero image -->
+                  <img
+                    src="./assets/hero-right.jpg"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg"
+                    data-aos="fade-left"
+                    data-aos-anchor="#hero-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  />
+                </div>
+              </div>
+
+              <!-- Decorative icon at the bottom right of the hero image -->
+              <img
+                src="./assets/hero-right-icon.svg"
+                alt="hero-icon"
+                class="absolute lg:right-7 lg:bottom-10 right-2 bottom-2"
+                data-aos="fade-left"
+                data-aos-anchor="#hero-right"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              />
+            </aside>
+          </div>
+        </div>
+      </header>
+
+      <!-- About Section -->
+      <section
+        class="py-14 lg:py-28 bg-no-repeat bg-auto bg-right-top"
+        style="background-image: url(./assets/badge.jpg)"
+      >
+        <div
+          class="container grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-[1.875rem]"
+        >
+          <!-- Image on the left -->
+          <img
+            src="./assets/about-image.jpg"
+            alt="about-image"
+            class="order-2 lg:order-1"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          />
+          <!-- Content on the right -->
+          <aside class="order-1 lg:order-2">
+            <!-- Section heading -->
+            <h4
+              class="font-niconne text-accent"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              About Us
+            </h4>
+
+            <!-- Main title -->
+            <h2
+              class="text-primary font-aileron font-bold mb-4"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              Notarization with a Personal Touch
+            </h2>
+
+            <!-- Description paragraph -->
+            <p
+              class="font-roboto text-lg"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              Founded in 2008, LegalMark has been at the forefront of providing
+              trusted notary services for over 15 years. Our journey began with
+              a simple mission: to make notarization services accessible,
+              efficient, and reliable for everyone.
+            </p>
+
+            <!-- Our Team section -->
+            <div
+              class="my-4 lg:my-8 border border-secondary p-4 rounded-lg bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <!-- Team heading -->
+              <h4 class="font-bold font-aileron">Our Team</h4>
+              <!-- Team description paragraph -->
+              <p class="mt-2 text-base">
+                Led by John Doe, a Certified Notary Public with over two decades
+                of experience, our team consists of highly trained and certified
+                notaries who are passionate about what they do. Each member of
+                our staff undergoes rigorous training.
+              </p>
+            </div>
+
+            <!-- Our Commitment section -->
+            <div
+              class="my-4 lg:my-8 border border-secondary p-4 rounded-lg bg-white"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <!-- Commitment heading -->
+              <h4 class="font-bold font-aileron">Our Commitment</h4>
+              <!-- Commitment description paragraph -->
+              <p class="mt-2 text-base">
+                At LegalMark, we understand that behind every document is an
+                important life event or business transaction. That's why we
+                approach each notarization with the utmost care and attention to
+                detail. We're not just authenticating signatures; we're helping
+                you move forward with confidence in life's important moments.
+              </p>
+            </div>
+
+            <!-- Button to discover more -->
+            <div class="mt-4" data-aos="fade-left" data-aos-duration="1000">
+              <button>Discover More</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-14 lg:py-28 bg-primary text-white">
+        <div class="container grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Left Section (Text Content) -->
+          <aside class="lg:pr-32">
+            <!-- Subheading for Services -->
+            <h4
+              class="font-niconne"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Services
+            </h4>
+
+            <!-- Main Heading for Service Section -->
+            <h2
+              class="font-aileron font-bold mb-4 lg:mb-6"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Service We Provide
+            </h2>
+
+            <!-- Description of Services -->
+            <p
+              class="font-roboto"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              At LegalMark, we offer a comprehensive range of notary services to
+              meet your legal needs.
+            </p>
+
+            <!-- List of Services -->
+            <ul class="mt-4 lg:mt-6 flex flex-col gap-4 lg:gap-6">
+              <!-- Service 1: Document Authentication -->
+              <li
+                class="flex gap-4 items-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/services/Icon-Placeholder.jpg"
+                  alt="Authentication"
+                  class="rounded-full"
+                />
+                <aside>
+                  <!-- Service Title -->
+                  <h4 class="font-aileron font-bold">
+                    Document Authentication
+                  </h4>
+                  <!-- Service Description -->
+                  <p class="mt-2 opacity-80">
+                    We verify and certify the authenticity of your important
+                    documents.
+                  </p>
+                </aside>
+              </li>
+
+              <!-- Service 2: Witnessing Signatures -->
+              <li
+                class="flex gap-4 items-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/services/Icon-Placeholder-1.jpg"
+                  alt="Witnessing Signatures"
+                  class="rounded-full"
+                />
+                <aside>
+                  <!-- Service Title -->
+                  <h4 class="font-aileron font-bold">Witnessing Signatures</h4>
+                  <!-- Service Description -->
+                  <p class="mt-2 opacity-80">
+                    Our notaries serve as impartial witnesses for the signing of
+                    legal documents.
+                  </p>
+                </aside>
+              </li>
+
+              <!-- Service 3: Real Estate Closings -->
+              <li
+                class="flex gap-4 items-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/services/Icon-Placeholder-2.jpg"
+                  alt="Real Estate Closings"
+                  class="rounded-full"
+                />
+                <aside>
+                  <!-- Service Title -->
+                  <h4 class="font-aileron font-bold">Real Estate Closings</h4>
+                  <!-- Service Description -->
+                  <p class="mt-2 opacity-80">
+                    Our notaries assist in the proper execution of real estate
+                    transactions.
+                  </p>
+                </aside>
+              </li>
+
+              <!-- Service 4: Certifying Copies -->
+              <li
+                class="flex gap-4 items-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/services/Icon-Placeholder-3.jpg"
+                  alt="Certifying Copies"
+                  class="rounded-full"
+                />
+                <aside>
+                  <!-- Service Title -->
+                  <h4 class="font-aileron font-bold">Certifying Copies</h4>
+                  <!-- Service Description -->
+                  <p class="mt-2 opacity-80">
+                    We authenticate copies of original documents, ensuring their
+                    legal validity.
+                  </p>
+                </aside>
+              </li>
+
+              <!-- Service 5: Administering Oaths -->
+              <li
+                class="flex gap-4 items-center"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./assets/services/Icon-Placeholder-3.jpg"
+                  alt="Administering Oaths"
+                  class="rounded-full"
+                />
+                <aside>
+                  <!-- Service Title -->
+                  <h4 class="font-aileron font-bold">Administering Oaths</h4>
+                  <!-- Service Description -->
+                  <p class="mt-2 opacity-80">
+                    We officiate oaths and affirmations for legal proceedings
+                  </p>
+                </aside>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Right Section (Image) -->
+          <img
+            src="./assets/services.jpg"
+            alt="service-image"
+            class="object-cover rounded-lg h-full w-full"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          />
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section
+        class="py-14 lg:py-28 bg-left-top bg-no-repeat"
+        style="background-image: url(./assets/badge-2.jpg)"
+      >
+        <div class="container">
+          <!-- Section Title -->
+          <h4
+            class="text-accent text-center font-niconne"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            How it works
+          </h4>
+          <!-- Main Heading -->
+          <h2
+            class="text-center font-aileron font-bold w-5/6 mx-auto md:w-full"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Your Notarization Journey with LegalMark
+          </h2>
+          <!-- Description Paragraph -->
+          <p
+            class="lg:w-1/3 mx-auto text-center lg:mt-6 mt-4"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            At LegalMark, we offer a comprehensive range of notary services to
+            meet your legal needs
+          </p>
+
+          <div class="pt-8 lg:pt-16 text-base">
+            <div class="container mx-auto">
+              <div class="flex flex-col md:flex-row gap-8 relative">
+                <!-- Left Section: Steps -->
+                <div
+                  class="flex flex-col justify-between gap-8 md:w-1/2 w-full"
+                >
+                  <!-- Step 1 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        1
+                      </div>
+                      <div>
+                        <!-- Step 1 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Schedule Your Appointment
+                        </h3>
+                        <!-- Step 1 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i>
+                            Call us at 123-456-7890 or use our online booking
+                            system.
+                          </li>
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i>
+                            Call us at 123-456-7890 or use our online booking
+                            system.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Step 2 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        2
+                      </div>
+                      <div>
+                        <!-- Step 2 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Prepare Your Documents
+                        </h3>
+                        <!-- Step 2 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i> Gather all documents
+                            requiring notarization.
+                          </li>
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i> Ensure documents are
+                            complete but unsigned.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Step 3 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        3
+                      </div>
+                      <div>
+                        <!-- Step 3 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Collect Necessary Identification
+                        </h3>
+                        <!-- Step 3 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i>
+                            If required, gather any additional supporting
+                            documents.
+                          </li>
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i> Prepare a valid,
+                            government-issued photo ID.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Vertical Timeline with Circles -->
+                <div
+                  class="hidden md:flex flex-col justify-around items-center relative w-full md:w-auto md:flex-grow-0"
+                >
+                  <div
+                    class="absolute top-0 bottom-0 w-px bg-gray-300 hidden md:block"
+                  ></div>
+                  <!-- Circle Connectors -->
+                  <div
+                    class="w-6 h-6 bg-accent rounded-full z-10 flex items-center justify-center text-white"
+                  ></div>
+                  <div
+                    class="w-6 h-6 bg-accent rounded-full z-10 flex items-center justify-center text-white"
+                  ></div>
+                  <div
+                    class="w-6 h-6 bg-accent rounded-full z-10 flex items-center justify-center text-white"
+                  ></div>
+                </div>
+
+                <!-- Right Section: Steps -->
+                <div
+                  class="flex flex-col justify-between gap-8 md:w-1/2 w-full"
+                >
+                  <!-- Step 4 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        4
+                      </div>
+                      <div>
+                        <!-- Step 4 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Meet with Our Notary
+                        </h3>
+                        <!-- Step 4 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2 lg:text-nowrap">
+                            <i class="fas fa-check mt-2"></i>
+                            Arrive at our office or welcome our mobile notary at
+                            your chosen location.
+                          </li>
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i> Present your documents
+                            and identification.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Step 5 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        5
+                      </div>
+                      <div>
+                        <!-- Step 5 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Document Review
+                        </h3>
+                        <!-- Step 5 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2">
+                            <i class="fas fa-check mt-2"></i>
+                            Our notary will carefully review your documents to
+                            ensure they meet all legal requirements.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Step 6 -->
+                  <article data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                      class="bg-white p-6 rounded-lg shadow-md relative h-full hover:bg-accent hover:bg-opacity-5 hover:shadow-xl transition"
+                    >
+                      <div
+                        class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-lg font-bold aspect-square mb-2"
+                      >
+                        6
+                      </div>
+                      <div>
+                        <!-- Step 6 Heading -->
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                          Receive Your Notarized Documents
+                        </h3>
+                        <!-- Step 6 Details -->
+                        <ul class="text-gray-600 space-y-2">
+                          <li class="flex gap-2">
+                            <i class="fas fa-check mt-2"></i>
+                            Once complete, you’ll receive your officially
+                            notarized documents.
+                          </li>
+                          <li class="flex gap-2 items-center">
+                            <i class="fas fa-check"></i>
+                            We’ll provide guidance on any next steps or filing
+                            procedures.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section
+        class="py-14 lg:py-28 bg-no-repeat text-white"
+        style="background-image: url(./assets/faq-bg.jpg)"
+      >
+        <div class="container">
+          <!-- Title and Introduction -->
+          <h4
+            class="text-center font-niconne"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            About Us
+          </h4>
+          <h2
+            class="text-center font-aileron font-bold"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Frequently Asked Questions
+          </h2>
+          <p
+            class="my-6 text-center"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            Here are some common questions people ask us.
+          </p>
+
+          <!-- FAQ Accordion Container -->
+          <div
+            class="lg:w-2/3 mx-auto border border-secondary divide-y divide-secondary"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <!-- Accordion Item 1 -->
+            <div
+              class="accordion-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <!-- Accordion Header -->
+              <button
+                class="accordion-header gap-1 flex justify-between items-center w-full text-left text-white p-5 lg:p-10 rounded-none font-aileron text-xl lg:text-2xl open"
+              >
+                <span
+                  >1. What documents do I need to bring for notarization?</span
+                >
+                <i
+                  class="fas fa-chevron-down transition-transform duration-300 chevron rotate-0"
+                ></i>
+              </button>
+              <!-- Accordion Content -->
+              <div
+                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 bg-secondary"
+              >
+                <p class="px-5 lg:px-10 pb-6">
+                  You need to bring the document you want to get notarized and a
+                  valid, government-issued photo ID (like a driver's license or
+                  passport).
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div
+              class="accordion-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <!-- Accordion Header -->
+              <button
+                class="accordion-header flex justify-between items-center w-full text-left text-white p-5 lg:p-10 bg-transparent rounded-none font-aileron text-xl lg:text-2xl"
+              >
+                <span>2. Do you offer mobile notary services?</span>
+                <i
+                  class="fas fa-chevron-down transition-transform duration-300 chevron rotate-0"
+                ></i>
+              </button>
+              <!-- Accordion Content -->
+              <div
+                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 bg-secondary"
+              >
+                <p class="px-5 lg:px-10 pb-6">
+                  Yes, we do offer mobile notary services. We can come to your
+                  location for notarization if needed.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div
+              class="accordion-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <!-- Accordion Header -->
+              <button
+                class="accordion-header flex justify-between items-center w-full text-left text-white p-5 lg:p-10 bg-transparent rounded-none font-aileron text-xl lg:text-2xl"
+              >
+                <span>3. What types of payment do you accept?</span>
+                <i
+                  class="fas fa-chevron-down transition-transform duration-300 chevron rotate-0"
+                ></i>
+              </button>
+              <!-- Accordion Content -->
+              <div
+                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 bg-secondary"
+              >
+                <p class="px-5 lg:px-10 pb-6">
+                  We accept various payment methods, including cash, credit
+                  cards, and debit cards.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div
+              class="accordion-item"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <!-- Accordion Header -->
+              <button
+                class="accordion-header flex justify-between items-center w-full text-left text-white p-5 lg:p-10 bg-transparent rounded-none font-aileron text-xl lg:text-2xl"
+              >
+                <span>4. What are your operating hours?</span>
+                <i
+                  class="fas fa-chevron-down transition-transform duration-300 chevron rotate-0"
+                ></i>
+              </button>
+              <!-- Accordion Content -->
+              <div
+                class="accordion-content max-h-0 overflow-hidden transition-all duration-300 bg-secondary"
+              >
+                <p class="px-5 lg:px-10 pb-6">
+                  Our regular operating hours are Monday through Friday, 9 AM to
+                  5 PM. We are closed on weekends and public holidays.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Us Section -->
+          <div
+            class="container mt-10 lg:mt-20 bg-[size:100%] py-6 lg:py-12 flex justify-center rounded-2xl flex-col items-center"
+            style="background-image: url(./assets/sub-faq-bg.jpg)"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h3
+              class="text-black-heading font-aileron mb-4 lg:mb-8 lg:w-1/2 mx-auto text-center font-bold"
+            >
+              Still have a concern? Let us know your query.
+            </h3>
+            <button>Contact Us</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-14 lg:py-28 container">
+        <h4
+          class="font-niconne text-accent text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Practice Area
+        </h4>
+        <h2
+          class="text-primary font-aileron font-bold mb-4 text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Our Areas of Expertise
+        </h2>
+        <p
+          class="font-roboto text-center lg:w-2/3 mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          At LegalMark, we offer comprehensive legal services to meet a wide
+          range of needs. Our experienced team of attorneys specializes in
+          various practice areas, ensuring that you receive expert guidance and
+          representation for your specific legal challenges. Explore our areas
+          of expertise below:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-4 lg:mt-8 gap-6">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shadow-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <!-- Image Section -->
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Image representing Family Law practice area"
+                />
+              </aside>
+              <!-- Text Section -->
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Family Law</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Navigating family matters with compassion and expertise. We're
+                  here to protect your interests and those of your loved ones.
+                </p>
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-1.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Real Estate Law</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  From property transactions to dispute resolution, we ensure
+                  your real estate dealings are legally sound and beneficial
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-2.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Business Law</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Empowering your business with solid legal foundations. We help
+                  you navigate the complexities of corporate law.
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-3.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Personal Injury</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Advocating for your rights and fair compensation. Let us
+                  handle the legal burden while you focus on recovery.
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-4.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Estate Planning</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Secure your legacy and protect your loved ones. We help you
+                  plan for the future with confidence.
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-5.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Criminal Defense</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Robust defense strategies tailored to your case. We stand by
+                  you throughout the legal process
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-6.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Employment Law</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Protecting your rights in the workplace. Whether you're an
+                  employee or employer, we ensure fair treatment
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="1000">
+            <article
+              class="flex flex-col sm:flex-row md:flex-col lg:flex-row border border-accent rounded-xl shadow-[1px_1px_20px_4px_#08092D0D] hover:bg-accent hover:bg-opacity-5 hover:shaodw-[1px_1px_30px_4px_#08092D0D] transition-all duration-500 group"
+            >
+              <aside
+                class="w-full sm:w-4/12 md:w-full lg:w-4/12 rounded-xl lg:rounded-lg overflow-hidden"
+              >
+                <!-- Image -->
+                <img
+                  src="./assets/expertises/Exotic Carinnean Gateway-7.jpg"
+                  class="object-cover group-hover:scale-125 w-full h-full transition duration-500"
+                  alt="Family Law"
+                />
+              </aside>
+              <aside class="px-6 py-4 w-full sm:w-8/12 md:w-full lg:w-8/12">
+                <!-- Heading -->
+                <h5 class="mb-2 font-aileron font-bold">Immigration Law</h5>
+                <!-- Text -->
+                <p class="mb-4">
+                  Guiding you through the complexities of immigration. We help
+                  make your American dream a reality.
+                </p>
+                <!-- Link -->
+                <a href="#" class="text-accent hover:underline">More Details</a>
+              </aside>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Appointment Section -->
+      <section
+        class="py-14 md:pb-28 lg:py-28 bg-cover bg-no-repeat"
+        style="background-image: url(./assets/appointment-bg.jpg)"
+      >
+        <div class="container">
+          <div class="flex gap-16 lg:gap-10 lg:flex-row flex-col-reverse">
+            <!-- Image Section -->
+            <div class="relative w-full lg:w-5/12">
+              <!-- Background Design Image -->
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                class="absolute top-0 bottom-0 my-auto left-0"
+              >
+                <img
+                  src="./assets/hero-right-bg.svg"
+                  class="rotate-180 -translate-y-1 -scale-y-[1.13] lg:-scale-y-[1.1] h-full w-full"
+                  alt=""
+                />
+              </div>
+              <!-- Main Appointment Image -->
+              <img
+                src="./assets/appointment.jpg"
+                alt="appointment"
+                class="rounded-3xl relative left-8 lg:left-8 w-11/12 lg:w-10/12 h-full lg:object-cover"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </div>
+
+            <!-- Text and Testimonial Section -->
+            <div class="w-full lg:w-7/12 relative flex items-center">
+              <div class="text-white lg:pl-8 lg:pt-0">
+                <!-- Quote Icon -->
+                <img
+                  src="./assets/quote.svg"
+                  class="hidden lg:block relative -left-12"
+                  alt="quote"
+                  data-aos="fade-in"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                />
+
+                <!-- Testimonial Title -->
+                <h2
+                  class="font-aileron font-bold mb-2 lg:text-40"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Judge Eleanor Simmons
+                </h2>
+
+                <!-- Subtext: Judge's Title -->
+                <p
+                  class="mb-6 lg:mb-10 text-xs md:text-base opacity-90"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Former Chief Justice, Court Expert in Constitutional Law and
+                  Legal Ethics
+                </p>
+
+                <!-- Testimonial Content -->
+                <p
+                  class="text-base md:text-lg lg:text-2xl"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  In my 30 years of legal practice, I've encountered numerous
+                  notary services. LegalMark stands out for their unwavering
+                  commitment to accuracy, efficiency, and client care. Their
+                  expertise in handling complex legal documents is truly
+                  commendable. For anyone seeking reliable notary services,
+                  LegalMark is the gold standard.
+                </p>
+
+                <!-- Appointment Button -->
+                <div
+                  class="mt-6 lg:mt-12"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  <button>Book Appointment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section
+        class="py-14 lg:py-28 bg-contain bg-no-repeat"
+        style="background-image: url(./assets/quote.svg)"
+      >
+        <!-- Container for the content -->
+        <div class="container">
+          <!-- Testimonial Heading -->
+          <h4
+            class="font-niconne text-accent text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Testimonial
+          </h4>
+
+          <!-- Section Title -->
+          <h2
+            class="text-primary font-aileron font-bold mb-2 lg:mb-4 text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            What Our Clients Say
+          </h2>
+
+          <!-- Description Text -->
+          <p
+            class="font-roboto text-center lg:w-5/6 mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            At LegalMark, our clients' satisfaction is our top priority. We're
+            proud to have served individuals and businesses across various legal
+            needs, providing reliable, efficient, and professional notary
+            services. But don't just take our word for it - here's what some of
+            our valued clients have to say about their experiences with us:
+          </p>
+
+          <!-- Testimonial Grid -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 items-center mt-8 gap-6 lg:gap-4"
+          >
+            <!-- Left Column: Testimonial Slider -->
+            <aside class="relative">
+              <!-- Testimonial Heading Indicator -->
+              <div
+                class="flex gap-2 items-center mb-2 lg:mb-10"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <!-- Decorative Dot -->
+                <div class="w-3 h-3 bg-accent"></div>
+                <!-- Testimonial Text -->
+                <h4 class="font-aileron font-bold">Testimonial</h4>
+              </div>
+
+              <!-- Swiper Slider for Testimonials -->
+              <div
+                class="swiper"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <!-- Swiper Wrapper: Contains all slides -->
+                <div class="swiper-wrapper">
+                  <!-- Individual Slide 1 -->
+                  <div class="swiper-slide">
+                    <!-- Slide Content: Testimonial Text -->
+                    <p>
+                      At LegalMark, our clients' satisfaction is our top
+                      priority. We're proud to have served individuals and
+                      businesses across various legal needs, providing reliable,
+                      efficient, and professional notary services. But don't
+                      just take our word for it - here's what some of our valued
+                      clients have to say about their experiences with us:
+                    </p>
+                    <!-- Client Info (Image, Name, Designation) -->
+                    <div class="flex gap-2 lg:gap-4 items-center mt-5">
+                      <!-- Client Image -->
+                      <img
+                        src="./assets/testimonials/testimonial1.jpg"
+                        alt="testimonial1"
+                      />
+                      <!-- Client Name and Designation -->
+                      <aside>
+                        <h5 class="font-bold lg:mb-2">Sarah T.</h5>
+                        <p>Small Business Owner</p>
+                      </aside>
+                    </div>
+                  </div>
+
+                  <!-- Additional slides: repeat the above structure for more testimonials -->
+                  <div class="swiper-slide">
+                    <!-- Similar structure for more testimonials -->
+                    <p>
+                      At LegalMark, our clients' satisfaction is our top
+                      priority. We're proud to have served individuals and
+                      businesses across various legal needs, providing reliable,
+                      efficient, and professional notary services. But don't
+                      just take our word for it - here's what some of our valued
+                      clients have to say about their experiences with us:
+                    </p>
+                    <div class="flex gap-2 lg:gap-4 items-center mt-5">
+                      <img
+                        src="./assets/testimonials/testimonial1.jpg"
+                        alt="testimonial1"
+                      />
+                      <aside>
+                        <h5 class="font-bold lg:mb-2">Sarah T.</h5>
+                        <p>Small Business Owner</p>
+                      </aside>
+                    </div>
+                  </div>
+
+                  <!-- You can add more slides here -->
+                </div>
+
+                <!-- Navigation Buttons for Swiper -->
+                <div
+                  class="flex gap-3 lg:gap-6 mt-4 justify-center lg:mt-0 lg:justify-start lg:absolute bottom-0 right-0 z-[99999999999]"
+                >
+                  <!-- Previous Button -->
+                  <button
+                    class="swiper-button-prev text-xl py-2 lg:py-4 px-4 lg:px-6"
+                  >
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                  <!-- Next Button -->
+                  <button
+                    class="swiper-button-next text-xl py-2 lg:py-4 px-4 lg:px-6"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Right Column: Testimonial Image -->
+            <aside class="relative" id="hero-right">
+              <!-- Background SVG behind the image -->
+              <img
+                src="./assets/hero-right-bg.svg"
+                class="ml-auto lg:w-fit w-11/12"
+                alt=""
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              />
+
+              <!-- Testimonial Main Image -->
+              <div
+                class="absolute right-8 left-1 lg:right-16 top-0 bottom-0 flex items-center"
+              >
+                <!-- Wrapper for Image -->
+                <div
+                  class="relative rounded-xl my-auto lg:h-auto lg:object-contain h-5/6"
+                >
+                  <!-- Actual Testimonial Image -->
+                  <img
+                    src="./assets/testimonial.jpg"
+                    alt=""
+                    class="w-full h-full object-cover object-center rounded-xl"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  />
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+
+      <section
+        style="background-image: url(./assets/contact-bg.jpg)"
+        class="bg-cover py-14 lg:py-28 text-white"
+      >
+        <div class="container">
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
+            <aside class="w-full relative lg:w-5/12 rounded-3xl">
+              <div class="absolute -scale-x-100 z-0 bottom-0">
+                <img
+                  src="./assets/hero-right-bg.svg"
+                  class="h-full"
+                  alt=""
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                />
+              </div>
+              <img
+                src="./assets/contact-image.png"
+                class="relative z-50 rounded-b-2xl lg:rounded-b-3xl h-full"
+                alt="contact-image"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </aside>
+            <aside class="w-full lg:w-7/12">
+              <h2
+                class="font-aileron font-bold mb-3 lg:mb-10"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                Contact Us
+              </h2>
+
+              <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 lg:gap-y-6"
+              >
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="firstName"
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Enter your first name"
+                  />
+                </aside>
+
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="lastName"
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Enter your last name"
+                  />
+                </aside>
+
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="emailAddress"
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    placeholder="Enter your Email Address"
+                  />
+                </aside>
+
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="phonno."
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >Phone No.</label
+                  >
+                  <input
+                    type="text"
+                    id="phonno."
+                    placeholder="Enter your Phone No."
+                  />
+                </aside>
+
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="services"
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >Services</label
+                  >
+
+                  <div
+                    class="relative px-5 py-4 w-full h-auto rounded border border-secondary placeholder:font-roboto placeholder:text-primary placeholder:opacity-40 focus:outline-none text-black-body bg-white"
+                  >
+                    <select
+                      name=""
+                      id="services"
+                      class="w-full bg-transparent focus:outline-none cursor-pointer"
+                    >
+                      <option selected disabled class="disabled:opacity-70">
+                        Select A Service
+                      </option>
+                      <option value="service-1">Service 1</option>
+                      <option value="service-2">Service 2</option>
+                      <option value="service-3">Service 3</option>
+                      <option value="service-4">Service 4</option>
+                      <option value="service-5">Service 5</option>
+                    </select>
+                  </div>
+                </aside>
+
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <label
+                    for="subject"
+                    class="block lg:mb-2 text-sm lg:text-base font-roboto"
+                    >Subject</label
+                  >
+                  <input type="text" id="subject" placeholder="Enter Subject" />
+                </aside>
+              </div>
+
+              <label
+                for="message"
+                class="block lg:mb-2 text-base font-roboto mt-2 lg:mt-6"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                class="resize-none"
+                placeholder="Enter Your Message Here"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              ></textarea>
+
+              <div data-aos="fade-left" data-aos-duration="1000">
+                <button class="mt-6 lg:mt-10">Submit now</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-14 lg:py-28">
+        <!-- Testimonial Heading -->
+        <h4
+          class="font-niconne text-accent text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Our Blog
+        </h4>
+
+        <!-- Section Title -->
+        <h2
+          class="text-primary font-aileron font-bold mb-2 lg:mb-4 text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          Our Latest News
+        </h2>
+
+        <div
+          class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6"
+        >
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <article
+              class="shadow-[1px_1px_20px_4px_#08092D0D] hover:shadow-[1px_1px_6px_4px_#08092D0D] p-4 rounded-xl transition cursor-pointer"
+            >
+              <img src="./assets/news/b1.webp" alt="news1" />
+              <div class="mt-4">
+                <p class="font-roboto text-accent">Legal Documentation</p>
+                <h4 class="font-aileron text-primary font-bold mt-4">
+                  The Top 5 Documents You Should Always Notarize
+                </h4>
+                <p class="mt-4 mb-6 opacity-80 lg:text-base">
+                  Don't risk the validity of your important papers. Discover the
+                  crucial documents that require notarization to ensure their
+                  legal standing and protect your interests. From wills to
+                  property deeds.
+                </p>
+                <div class="flex justify-between items-center">
+                  <p class="text-primary opacity-70">2, Sept 2020</p>
+                  <div class="flex text-accent items-center gap-4">
+                    <i class="far cursor-pointer fa-thumbs-up"></i>
+                    <i class="far cursor-pointer fa-comment-alt"></i>
+                    <i class="fas cursor-pointer fa-share-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <article
+              class="shadow-[1px_1px_20px_4px_#08092D0D] hover:shadow-[1px_1px_6px_4px_#08092D0D] p-4 rounded-xl transition cursor-pointer"
+            >
+              <img src="./assets/news/b2.webp" alt="news2" />
+              <div class="mt-4">
+                <p class="font-roboto text-accent">Mobile Notary Services</p>
+                <h4 class="font-aileron text-primary font-bold mt-4">
+                  Mobile Notary Services, Convenience at Your Doorstep
+                </h4>
+                <p class="mt-4 mb-6 opacity-80 lg:text-base">
+                  Explore the benefits of mobile notary services and how they're
+                  changing the game. Learn when to opt for a mobile notary, what
+                  to expect during the process.
+                </p>
+                <div class="flex justify-between items-center">
+                  <p class="text-primary opacity-70">20, Aug 2020</p>
+                  <div class="flex text-accent items-center gap-4">
+                    <i class="far cursor-pointer fa-thumbs-up"></i>
+                    <i class="far cursor-pointer fa-comment-alt"></i>
+                    <i class="fas cursor-pointer fa-share-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <article
+              class="shadow-[1px_1px_20px_4px_#08092D0D] hover:shadow-[1px_1px_6px_4px_#08092D0D] p-4 rounded-xl transition cursor-pointer"
+            >
+              <img src="./assets/news/b3.webp" alt="news3" />
+              <div class="mt-4">
+                <p class="font-roboto text-accent">Legal Guidance</p>
+                <h4 class="font-aileron text-primary font-bold mt-4">
+                  Understanding Power of Attorney, Your Legal Guide
+                </h4>
+                <p class="mt-4 mb-6 opacity-80 lg:text-base">
+                  Demystify the concept of Power of Attorney and its crucial
+                  role in legal matters. This comprehensive guide explains
+                  different types of POA, when you might need one to make it
+                  legally binding.
+                </p>
+                <div class="flex justify-between items-center">
+                  <p class="text-primary opacity-70">12, Aug 2020</p>
+                  <div class="flex text-accent items-center gap-4">
+                    <i class="far cursor-pointer fa-thumbs-up"></i>
+                    <i class="far cursor-pointer fa-comment-alt"></i>
+                    <i class="fas cursor-pointer fa-share-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-primary pt-14 pb-28 lg:py-28 text-white relative">
+        <div class="container">
+          <div class="flex flex-col lg:flex-row gap-14">
+            <div class="lg:w-5/12">
+              <img src="./assets/footer-logo.png" alt="logo" />
+              <p class="font-roboto mt-6">
+                At Solhaven, we are dedicated to providing compassionate and
+                personalized mental health services. Our mission is to empower
+                individuals and families on their journey
+              </p>
+
+              <div class="flex gap-4 mt-6">
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center bg-white bg-opacity-10 w-10 aspect-square rounded-full text-white hover:bg-opacity-100 hover:text-primary transition"
+                >
+                  <i class="fab fa-behance"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center bg-white bg-opacity-10 w-10 aspect-square rounded-full text-white hover:bg-opacity-100 hover:text-primary transition"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center bg-white bg-opacity-10 w-10 aspect-square rounded-full text-white hover:bg-opacity-100 hover:text-primary transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+
+                <a
+                  href="#"
+                  class="inline-flex items-center justify-center bg-white bg-opacity-10 w-10 aspect-square rounded-full text-white hover:bg-opacity-100 hover:text-primary transition"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="lg:w-7/12 grid-cols-1 md:grid-cols-2 grid lg:grid-cols-3 gap-10 lg:gap-0"
+            >
+              <aside>
+                <h4 class="font-aileron font-semibold mb-4 lg:mb-7">
+                  Practice Area
+                </h4>
+                <ul class="flex flex-col gap-2 lg:gap-4">
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Family Law
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Real Estate Law
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Business law
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Personal Injury
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Criminal Defense
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Estate Planning
+                    </a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">
+                      Employment Law
+                    </a>
+                  </li>
+                </ul>
+              </aside>
+              <aside>
+                <h4 class="font-aileron font-semibold mb-4 lg:mb-7">
+                  Quick Link
+                </h4>
+                <ul class="flex flex-col gap-2 lg:gap-4">
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">Home</a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">About</a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">Services</a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">Why Us</a>
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#"
+                      >Testimonial</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:opacity-60 transition" href="#">FAQ</a>
+                  </li>
+                </ul>
+              </aside>
+              <aside>
+                <h4 class="font-aileron font-semibold mb-4 lg:mb-7">
+                  Practice Area
+                </h4>
+                <ul class="flex flex-col gap-2 lg:gap-4">
+                  <li>Office Address : Saint Paul, MN 55112-6629 USA</li>
+                  <li>
+                    Email :
+                    <a href="mailto:support@Raddito.com">support@raddito.com</a>
+                  </li>
+                  <li>Call : 123-456-7890</li>
+                  <li>Office Hours : Monday to Friday 9:00 TO 17.00</li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white py-2 lg:py-6 absolute bottom-0 left-0 w-full text-black-body"
+        >
+          <div
+            class="container px-0 gap-2 lg:px-4 flex justify-between flex-col lg:flex-row items-center"
+          >
+            <p class="text-center">
+              Copyright &copy;<span id="year"></span> Design & Developed by
+              <a
+                class="underline hover:no-underline font-medium text-accent"
+                href="#"
+                >Raddito LLC</a
+              >.
+            </p>
+
+            <div class="flex gap-4 text-accent list-none">
+              <li>
+                <a href="#" class="flex gap-2 items-center">
+                  <i class="far fa-check-circle"></i>
+                  Privacy
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="flex gap-2 items-center">
+                  <i class="far fa-check-circle"></i>
+                  Term
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="flex gap-2 items-center">
+                  <i class="far fa-check-circle"></i>
+                  Disclaimer
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/b50fc748ca.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
